@@ -41,7 +41,7 @@
              // for each name...
              let div = $("<div class='name red-text'>").append(
                  "____<a class='modal-trigger' data-target='inputModal' data-id='" + result.id + "'>" + result.name + "</a><br>" +
-                 "<a class='range modal-trigger' data-target='inputModal data-id='" + result.id + " '><span style='color: red;'>|____</span>Numbers Ranging From: " + result.low + " To: " + result.high + "</a>"
+                 "<a class='range modal-trigger' data-target='inputModal data-id='" + result.id + "'><span style='color: red;'>|____</span>Numbers Ranging From: " + result.low + " To: " + result.high + "</a>"
              ); // get numbers and make these...
              numbers.forEach(function(result) {
                  console.log('id for numberModal: ' + result.id)
@@ -60,7 +60,7 @@
      // make however many in the range
      for (let i = 0; i < numbersRequest; i++) {
          // make a random number
-         let number = Math.floor(Math.random() * high) + low
+         let number = Math.floor(Math.random() * (high - low) + 1) + low;
          // data to create number entry
          let data = {
              value: number,
