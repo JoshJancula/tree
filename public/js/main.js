@@ -40,13 +40,13 @@
              let numbers = result.LuckyNumbers;
              // for each name...
              let div = $("<div class='name red-text'>").append(
-                 "____<a class='modal-trigger' data-target='inputModal' data-id='" + result.id + "'>" + result.name + "</a><br>" +
-                 "<a class='range modal-trigger' data-target='inputModal' data-id='" + result.id + "'><span style='color: red;'>|____</span>Numbers Ranging From: " + result.low + " To: " + result.high + "</a>"
+                 "____<a class='modal-trigger' href='#inputModal' data-id='" + result.id + "'>" + result.name + "</a><br>" +
+                 "<a class='range modal-trigger' href='#inputModal' data-id='" + result.id + "'><span style='color: red;'>|____</span>Numbers Ranging From: " + result.low + " To: " + result.high + "</a>"
              ); // get numbers and make these...
              numbers.forEach(function(result) {
                  console.log('id for numberModal: ' + result.id)
                  let div2 = $('<div class="lucky">').append(
-                     "|____<a class='modal-trigger trigger' data-target='numberModal' data-id='" + result.id + "'>" + result.value + "</a>"
+                     "|____<a class='modal-trigger trigger' href='#numberModal' data-id='" + result.id + "'>" + result.value + "</a>"
                  ) // append those to div
                  div.append(div2);
              }); // append to mainContent
