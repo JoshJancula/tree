@@ -1,0 +1,66 @@
+body {
+    background: black;
+}
+
+
+
+#mainContent {
+    border-left: solid 2px red;
+    margin-left: 8%;
+    margin-top: -1%;
+}
+
+h6 {
+    color: white;
+    margin-top: 3%;
+}
+
+h5 {
+    border-bottom: 2px solid red;
+    width: 8%;
+    color: #448aff;
+    
+}
+
+.card {
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 80%;
+}
+
+.name {
+    margin-top: 2%;
+}
+
+.range {
+    margin-left: 5%;
+}
+
+.lucky {
+    margin-left: 10%;
+}
+
+@media screen and (max-width: 550px) and (min-width: 200px) {
+ .card {
+    margin-top: 5%;
+    margin-left: 0;
+    width: 100%;
+}
+
+#mainContent {
+    border-left: solid 2px red;
+    margin-left: 10%;
+    margin-top: -1%;
+}
+
+h5 {
+    border-bottom: 2px solid red;
+    width: 12%;
+    margin-left: 0%;
+}
+
+.lucky {
+    margin-left: 10%;
+}
+ 
+}
