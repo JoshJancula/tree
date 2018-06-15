@@ -131,7 +131,12 @@
      // data to be passed
      let input = {
          name: name
-     } // name length must be less than 15 characters
+     } // make sure they input something
+     if (!name) {
+         alert('Please input something to update the name to');
+         return;
+     }
+     // name length must be less than 15 characters
      if (sLength > 15 || sLength < 3) {
          alert("We're sorry but entry names must be at least 3 characters long and can be no longer than 15 characters")
      } // check to make sure its only letters
@@ -219,13 +224,19 @@
          name: name,
          low: low,
          high: high
-     } // test to make sure its only letters being input
+     }
      let reg = /^[a-zA-Z]+$/;
+     let reg2 = /^\d+$/;
+     // make sure everything is there
+     if (!high || !low || !name) {
+         alert('please complete the form');
+         return;
+     } // test to make sure its only letters being input
      if (reg.test(name) == false) {
          alert('Please only use letters in the entry names');
          return;
      } // test to make sure only numbers for ranges
-     let reg2 = /^\d+$/;
+
      if (reg2.test(low) == false) {
          alert("Please only input them digits!");
          return;
@@ -297,11 +308,11 @@
                  postNumber(numbersRequest, id, low, high);
              }
          }
-         else {
+         else {// run post
              postNumber(numbersRequest, id, low, high);
          }
      });
-      // close modal
-         $('#inputModal').modal('close');
+     // close modal
+     $('#inputModal').modal('close');
  });
  
